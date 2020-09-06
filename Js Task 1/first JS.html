@@ -1,0 +1,108 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>session 1 JS</title>
+    </head>
+    <body>
+        <input type="number" id="number1">
+        <input type="number" id="number2">
+        
+        <button id="sum" onClick="onclickhandel(n1 , n2 , 1)">+</button>
+        <button id="abs" onClick="onclickhandel(n1 , n2 , 2)">-</button>
+        <button id="mul" onClick="onclickhandel(n1 , n2 , 3)">*</button>
+        <button id="div" onClick="onclickhandel(n1 , n2 , 4)">/</button>
+        <button id="allop" onClick="onclickhandel(n1 , n2 , 5)">+-*/</button>
+
+        <h3>Result: <span id="result">0</span></h3>
+        
+        <script>
+            var n1 = parseFloat(document.getElementById('number1').value),
+                    n2 = parseFloat(document.getElementById('number2').value);
+
+            function onclickhandel(n1 , n1 , opnum ) {
+                 debugger;
+               var a; 
+                if ( opnum == 1 ) {
+                   a = sum(n1,n2);
+                }
+                else if (opnum == 2){
+                   a =  abs(n1 , n2);
+                }
+                else if (opnum == 3){
+                    a = mul(n1 , n2);
+                }
+                else if (opnum == 4){
+                   a = div(n1 , n2);
+                }
+                else if (opnum == 5){
+                    
+                    a = allopr(n1 , n2);
+                    
+                }
+                else { a=NaN; }
+            
+
+            }
+            function sum(n1 , n2) {
+                var n1 = parseFloat(document.getElementById('number1').value),
+                    n2 = parseFloat(document.getElementById('number2').value),
+                    sum1 = n1 + n2,
+                    result = document.getElementById('result');
+
+                result.innerText = sum1;
+                return sum1;
+            }
+            function mul(n1 , n2) {
+                var n1 = parseFloat(document.getElementById('number1').value),
+                    n2 = parseFloat(document.getElementById('number2').value),
+                    mul1 = n1 * n2,
+                    result = document.getElementById('result');
+
+                result.innerText = mul1;
+                return mul1;
+            }
+            function div(n1 , n2) {
+                var n1 = parseFloat(document.getElementById('number1').value),
+                    n2 = parseFloat(document.getElementById('number2').value),
+                    div1 = n1 / n2,
+                    result = document.getElementById('result');
+
+                result.innerText = div1;
+                return div1;
+            }
+            function abs(n1 , n2) {
+                var n1 = parseFloat(document.getElementById('number1').value),
+                    n2 = parseFloat(document.getElementById('number2').value),
+                    abs1 = n1 - n2,
+                    result = document.getElementById('result');
+
+                result.innerText = abs1;
+                return abs1;
+            }
+            function allopr(n1 , n2)
+            {
+                var n1 = parseFloat(document.getElementById('number1').value),
+                    n2 = parseFloat(document.getElementById('number2').value),
+            
+                      n=sum(n1 , n2),
+                    b= div(n1 , n2),
+                       c=abs(n1 , n2),
+                        d= mul(n1 , n2),
+                        sums = n.toString(),
+                        divs = b.toString(),
+                        abss = c.toString(),
+                        muls = d.toString();
+
+
+                 allopre1 = 'sum is  ' + n + '    ---     div is  ' + b + '   ---    abs is  ' + c+ '    ---    mul is  ' + d ;
+                result.innerText = allopre1;
+                return allopre1;
+                
+                 
+            }
+        </script>
+    </body>
+</html>
