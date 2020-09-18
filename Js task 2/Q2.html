@@ -1,0 +1,48 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Q2</title>
+    </head>
+    <BOdy>
+        
+        <input type="number" id="wins">
+        <input type="number" id="draws">
+        <input type="number" id="loses">
+        <button id="cal" onClick="onClickhandle()">cal</button>
+
+        <h3>total points is :. <span id="result">0</span></h3>
+        <script>
+            debugger;
+            function onClickhandle()
+            {
+                var n1= parseFloat(document.getElementById('wins').value) , 
+             n2 =  parseFloat(document.getElementById('draws').value),
+             n3 =  parseFloat(document.getElementById('loses').value);
+             var first = totalpoint(n1 , n2 , n3);
+             printresult(first);
+
+
+            }
+             
+             function totalpoint(nw , nd, nl) {
+
+                let a , b , c , total;
+                a = nw * 3 ;
+                b = nd ; 
+                c = nl ;
+                total = a+b+c;
+                return total;
+
+             }
+             function printresult(c)
+             {
+               document.getElementById('result').innerHTML = c ; 
+
+             }
+
+
+        </script>
+    </BOdy>

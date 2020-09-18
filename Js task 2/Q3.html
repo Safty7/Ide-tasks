@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hassan">
+    <title>Qu3</title>
+</head>
+<body>
+    <h2>Are the numbers equal?</h2>
+    <input type="number" id="number1">
+    <input type="number" id="number2">
+    <button id="outcome" onClick="result()">check</button>
+    <h3>Result: <span id="result2"></span></h3>
+    <script>
+        function outcome() {
+    var n1 = parseFloat(document.getElementById("number1").value),
+        n2 =parsefloat(document.getElementById("nummber2").value);
+    if(num1 === num2){
+        return true
+    }else {
+        return false
+    }
+}
+function result() {
+    document.getElementById("result2").innerText = outcome();
+}
+    </script>
+</body>
+</html>

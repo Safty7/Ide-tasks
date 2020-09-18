@@ -19,6 +19,7 @@
         <h3>Result: <span id="result">0</span></h3>
         
         <script>
+            debugger;
             var n1 = parseFloat(document.getElementById('number1').value),
                     n2 = parseFloat(document.getElementById('number2').value);
 
@@ -87,14 +88,11 @@
                 var n1 = parseFloat(document.getElementById('number1').value),
                     n2 = parseFloat(document.getElementById('number2').value),
             
-                      n=sum(n1 , n2),
-                    b= div(n1 , n2),
-                       c=abs(n1 , n2),
-                        d= mul(n1 , n2),
-                        sums = n.toString(),
-                        divs = b.toString(),
-                        abss = c.toString(),
-                        muls = d.toString();
+                      n=sum(n1 , n2).toString(),
+                    b= div(n1 , n2).toString(),
+                       c=abs(n1 , n2).toString(),
+                        d= mul(n1 , n2).toString();
+                        
 
 
                  allopre1 = 'sum is  ' + n + '    ---     div is  ' + b + '   ---    abs is  ' + c+ '    ---    mul is  ' + d ;
